@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
+    "run:prod": "lite-server -c bs-config.prod.js",
     "build": "tsc && webpack --progress",
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" -c bs-config.dev.json ",
     "lite": "lite-server",
     "postinstall": "typings install",
     "tsc": "tsc",
